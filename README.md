@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Luane é Braba</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #0e0e0e;
+      font-family: Arial, sans-serif;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    .rain {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .drop {
+      position: absolute;
+      bottom: 100%;
+      width: 2px;
+      height: 15px;
+      background: rgba(255, 255, 255, 0.2);
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(100vh);
+      }
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #00bfff;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2em;
+      max-width: 700px;
+      margin: 0 auto 20px;
+      line-height: 1.6em;
+    }
+
+    button {
+  margin-top: 30px;
+  padding: 12px 24px;
+  font-size: 18px;
+  background: linear-gradient(270deg, #ff66a3, #ff99c8, #ff66a3);
+  background-size: 600% 600%;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  animation: brilho 3s ease-in-out infinite;
+  transition: background-color 0.3s;
+}
+
+@keyframes brilho {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+button:hover {
+  background-color: #cc527a;
+  animation-play-state: paused; /* para pausar a animação no hover, se quiser */
+}
+
+    button:hover {
+      background-color: #cc527a;
+    }
+  </style>
+</head>
+<body>
+  <div class="rain" id="rain"></div>
+
+  <div class="content">
+    <h1>Luane, uma pessoa incrível</h1>
+    <p>
+      Luane é daquelas pessoas que você percebe de longe o quanto é dedicada. Tudo que ela se propõe a fazer, faz bem feito.
+      Sempre comprometida, focada e com aquele jeitão gente boa de sempre.
+    </p>
+    <p>
+      Tá treinando firme, evoluindo direto, e olha... daqui a pouco o bíceps vai estar maior que a coxa kkk (brincadeira)
+    </p>
+    <p>
+      Enfim, isso aqui só foi o minimo que eu poderia fazer para uma amiga tão especial c:
+    </p>
+
+    <button onclick="mostrarMensagem()">Eu sei que voce é curiosa, pode clicar aqui</button>
+  </div>
+
+  <script>
+    // Criando chuva
+    const rain = document.getElementById('rain');
+    for (let i = 0; i < 120; i++) {
+      const drop = document.createElement('div');
+      drop.classList.add('drop');
+      drop.style.left = Math.random() * 100 + 'vw';
+      drop.style.animationDuration = 0.5 + Math.random() + 's';
+      drop.style.animationDelay = Math.random() * 5 + 's';
+      rain.appendChild(drop);
+    }
+
+    // Mensagem romântica
+    function mostrarMensagem() {
+      alert("Voce é incrivel, Luluh");
+    }
+  </script>
+</body>
+</html>
