@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Luane é Braba</title>
   <style>
     body {
@@ -57,38 +57,44 @@
     }
 
     button {
-  margin-top: 30px;
-  padding: 12px 24px;
-  font-size: 18px;
-  background: linear-gradient(270deg, #ff66a3, #ff99c8, #ff66a3);
-  background-size: 600% 600%;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  animation: brilho 3s ease-in-out infinite;
-  transition: background-color 0.3s;
-}
+      margin-top: 30px;
+      padding: 12px 24px;
+      font-size: 18px;
+      background: linear-gradient(270deg, #ff66a3, #ff99c8, #ff66a3);
+      background-size: 600% 600%;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      animation: brilho 3s ease-in-out infinite;
+      transition: background-color 0.3s;
+    }
 
-@keyframes brilho {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-button:hover {
-  background-color: #cc527a;
-  animation-play-state: paused; /* para pausar a animação no hover, se quiser */
-}
+    @keyframes brilho {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
 
     button:hover {
       background-color: #cc527a;
+      animation-play-state: paused;
+    }
+
+    /* Media Queries para aumentar fonte no celular */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 3.5em;
+      }
+      p {
+        font-size: 1.6em;
+      }
     }
   </style>
 </head>
